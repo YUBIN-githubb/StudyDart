@@ -1,11 +1,11 @@
 void main() {
 
-  // late 키워드는 변수에 값을 담지 않고 미리 선언할 수 있게 해줌.
-  // 후에 값을 넣기 때문에 late
-  late final String name;
-  name = "yubin"; // final이라 한 번만 할당 가능
-  print(name);
+  // const 키워드는 compile-time에 알고 있는 값
+  // 하드코딩되어 잆는 값. 상수
+  const APi_KEY = "dfaewr";
+  const max_allowed_price = 120;
 
-  // API date fetching에 자주 쓰임
+  // 컴파일 타임에 어떤 값인지 모르고 혹은 그 값이 API로부터 온다거나
+  // 사용자가 화면에서 입력하는 값이라면 var 이나 final 이어야 함
 
 }
