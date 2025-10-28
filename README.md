@@ -72,3 +72,21 @@
     map : 파이썬의 딕셔너리와 같은 형태. 키-밸류 형태의 값을 가지는 자료구조.
 
     set : 리스트와 달리 {}를 사용하고, set안의 모든 요소가 unique함. 
+
+## Day 4 : [함수] (2025-10-28)
+
+### 📌 오늘 배운 핵심 개념
+
+**[개념 1]**: 함수
+
+    define function : 기본적인 함수 정의하는 것처럼 하면 됨. fat arrow syntax로 짧은 함수라면 더 짧게 표현할 수 있음.
+
+    named parameter : 일반적인 positional parameter로 하면 파라미터의 순서가 바뀌었을 때 잘못 동작하게 될 수 있음. 그럴 경우 named parameter를 이용해서 순서에 상관없이 그 값이 어떤 값인지를 나타내게 해서 동작하도록 할 수 있음. 구현 방법은 함수 파라미터 정의 부분에 {}를 씌워서 나타냄. 파라미터로 값이 들어오지 않을 경우를 대비해서 default value를 정의할 수 있음. default value 정의 외에도 required 키워드를 이용해서 이 함수에서 이 파라미터는 꼭 들어와야하는 값이라고 명시할 수 있음.
+
+    optional positional parameter : positional prameter로 정의하고 싶은데 어떤 값이 nullable 해도 될 경우 사용. 특정 파라미터만 []로 감싼 후 타입에 ?를 덧붙여 nullable임을 표시. default value 도 정의할 수 있음. 그러나 이건 많이 쓰지 않음.
+
+    ?? : 파라미터가 nullable일 경우 null safe 하게 하기 위해서 사용. 왼쪽 결과물이 null일 경우 오른쪽 결과물을 return. 
+
+    ??= : nullable한 어떤 변수에 값을 대입하는데, 그때 그 변수가 null일 경우 이 값을 대입하라는 뜻. ex) name ??= 'yubin'; 
+
+    typedef : Map<String,String>과 같이 이름이 긴 타입인 경우, 내가 alias를 만들어서 사용 가능. 그러나 이건 많이 사용하지 않고 내가 원하는 data structure가 있으면 class를 만들어서 사용.
