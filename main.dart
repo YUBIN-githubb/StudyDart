@@ -1,9 +1,7 @@
-String sayHello(
-  String name, 
-  int age, 
-  [String? country = 'wakanda']) => "Hello $name, you are $age and you come from $country";
+// 왼쪽 결과물이 null 아니라면 그대로 왼쪽 return. null이라면 오른쪽 return
+String capitalizeName(String? name) => name?.toUpperCase() ?? 'anonymus';
 
 void main() {
-  var results = sayHello('yubin', 10);
-  print(results);
+  capitalizeName('yubin');
+  capitalizeName(null);
 }
