@@ -1,17 +1,14 @@
-typedef ListOfInt = List<int>;
-typedef UserInfo = Map<String,String>;
+class Player {
+  final String name = 'yubin';
+  int xp = 1000;
 
-ListOfInt reverseListOfNumbers(ListOfInt list) {
-  var reversed = list.reversed;
-  return reversed.toList();
-}
-
-String sayHi(UserInfo userInfo) {
-  return "Hi ${userInfo['name']}";
+  void sayHello() {
+    print("Hello. My name is $name"); // 함수 내에 property와 겹치는 변수 이름이 있지 않은 이상 this 사용 권고X
+  }
 }
 
 void main() {
-
-  print(reverseListOfNumbers([1,2,3]));
-  print(sayHi({'name' : 'yubin'}));
+  var player = Player(); // no need new keyword
+  print(player.name);
+  player.sayHello();
 }
